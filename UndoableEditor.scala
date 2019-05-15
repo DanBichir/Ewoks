@@ -1,5 +1,7 @@
 
 
+
+
 // UndoHistoryEditor.scala
 // Copyright (c) 2015 J. M. Spivey
 // Modified 2017 by P.G. Jeavons
@@ -57,6 +59,21 @@ class UndoableEditor extends Editor with UndoHistory {
             return true
         }
         return false
+    }
+    
+    /** Command: Transpose two neighbours from a specific position */
+    override def transposeCommand(): Boolean = {
+	var p  = ed.point
+	var ch = text.charAt(p)
+
+	if(super.transposeCommand()){
+	    lastChange = new Change {
+		def undo() { ed.transpose(p); p-=1 }
+		def redo() { ed.transpose(p); p+=1 }
+	    }
+	    return true
+	}
+	return false
     }
     
     /** Prompt for a file to read into the buffer and reset history */
