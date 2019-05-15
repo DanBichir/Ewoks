@@ -1,5 +1,3 @@
-
-
 // UndoHistory.scala
 // Copyright (c) 2015 J. M. Spivey
 // Modified 2017 by P.G. Jeavons 
