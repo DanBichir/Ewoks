@@ -1,0 +1,8 @@
+    def deleteBetween(a: Int, b: Int) = {
+        var i = a
+        var j = b
+        while(i<j && i<length) {
+            deleteChar(i)
+            j=j-1
+        }
+    }
