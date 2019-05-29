@@ -6,3 +6,15 @@
             j=j-1
         }
     }
+    
+    
+    
+    
+    /*var i = ed.mark
+      var j = ed.point
+      if(i > j) {
+          var k = i
+          i = j
+          j = k
+      }
+      clipboard = ed.copy(i,j)*/
